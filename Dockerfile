@@ -6,4 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "dataflow.py"]
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
